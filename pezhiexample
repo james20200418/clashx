@@ -1,7 +1,7 @@
 ###############################################################
 # 本范例来源为网络
 # YouTube 搜索 詹姆斯日常生活
-# 感谢大家的支持
+# 
 ###############################################################
 port: 7890
 socks-port: 7891
@@ -141,6 +141,22 @@ Proxy:
   port: 443
   password: xx
 
+- name: "SS V2ray-Plugin"
+  type: ss
+  server: xxxxxx
+  port: 443
+  cipher: aes-256-gcm
+  password: "xxxxx"
+  plugin: v2ray-plugin
+  plugin-opts:
+  plugin: v2ray-plugin
+  plugin-opts:
+       mode: websocket
+       tls: true
+       skip-cert-verify: true
+       host: xxxxx
+       path: ""
+       mux: true
  
 ###############################################################配置分割线
 
@@ -154,6 +170,7 @@ Proxy Group:
     - "S3 V2ray节点"
     - "S4 SS节点"
     - "Trojan节点"
+    - "SS V2ray-Plugin"
   url: 'http://www.gstatic.com/generate_204'
   interval: 300
 
@@ -165,6 +182,7 @@ Proxy Group:
     - "S3 V2ray节点"
     - "S4 SS节点"
     - "Trojan节点"
+    - "SS V2ray-Plugin"
 # 白名单模式 PROXY，黑名单模式 DIRECT
 - name: "Final"
   type: select
@@ -185,6 +203,7 @@ Proxy Group:
     - "S3 V2ray节点"
     - "S4 SS节点"
     - "Trojan节点"
+    - "SS V2ray-Plugin"
 # 大陆流媒体面向港澳台限定服务
 - name: "HKMTMedia"
   type: select
@@ -193,6 +212,7 @@ Proxy Group:
     - "S3 V2ray节点"
     - "S4 SS节点"
     - "Trojan节点"
+    - "SS V2ray-Plugin"
 # 运营商及声名狼藉网站劫持
 - name: "Hijacking"
   type: select
