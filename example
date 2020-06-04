@@ -1,7 +1,7 @@
 ###############################################################
 # 本范例来源为网络
 # YouTube 搜索 詹姆斯日常生活
-# 
+# 感谢大家的支持
 ###############################################################
 port: 7890
 socks-port: 7891
@@ -118,29 +118,29 @@ Proxy:
 
 
 # 配置开始
-- name: "V2ray节点的主机测试"
+- name: "S3 V2ray节点"
   type: vmess
-  server: c16s3.jamjams.net
-  port: 12722
-  uuid: 74a06691-ffad-4774-8422-146cc3fee962
+  server: cxxs3.jamjams.net
+  port: xx
+  uuid: xxxx
   alterId: 0
   cipher: auto
   network: tcp
  
-
-- name: "Trojan节点的主机测试"
-  type: trojan
-  server: www.showtime20200229.monster
-  port: 443
-  password: 9cc32414
-
-- name: "S4节点"
+- name: "S4 SS节点"
   type: ss
-  server: c16s4.jamjams.net
-  port: 12722
+  server: cxxs4.jamjams.net
+  port: xxx
   cipher: aes-256-gcm
-  password: 9oPnTrZMCE
+  password: xxxxx
   obfs: tls
+
+- name: "Trojan节点"
+  type: trojan
+  server: xxxr
+  port: 443
+  password: xx
+
  
 ###############################################################配置分割线
 
@@ -151,9 +151,9 @@ Proxy Group:
 - name: "自动节点选择"
   type: url-test
   proxies:
-    - "V2ray节点的主机测试"
-    - "Trojan节点的主机测试"
-    - "S4节点"
+    - "S3 V2ray节点"
+    - "S4 SS节点"
+    - "Trojan节点"
   url: 'http://www.gstatic.com/generate_204'
   interval: 300
 
@@ -162,9 +162,9 @@ Proxy Group:
   type: select
   proxies:
     - "自动节点选择"
-    - "V2ray节点的主机测试"
-    - "Trojan节点的主机测试"
-    - "S4节点"
+    - "S3 V2ray节点"
+    - "S4 SS节点"
+    - "Trojan节点"
 # 白名单模式 PROXY，黑名单模式 DIRECT
 - name: "Final"
   type: select
@@ -182,17 +182,17 @@ Proxy Group:
   type: select
   proxies:
     - "PROXY"
-    - "V2ray节点的主机测试"
-    - "Trojan节点的主机测试"
-    - "S4节点"
+    - "S3 V2ray节点"
+    - "S4 SS节点"
+    - "Trojan节点"
 # 大陆流媒体面向港澳台限定服务
 - name: "HKMTMedia"
   type: select
   proxies:
     - "DIRECT"
-    - "V2ray节点的主机测试"
-    - "Trojan节点的主机测试"
-    - "S4节点"
+    - "S3 V2ray节点"
+    - "S4 SS节点"
+    - "Trojan节点"
 # 运营商及声名狼藉网站劫持
 - name: "Hijacking"
   type: select
