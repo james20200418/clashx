@@ -149,8 +149,6 @@ Proxy:
   password: "xxxxx"
   plugin: v2ray-plugin
   plugin-opts:
-  plugin: v2ray-plugin
-  plugin-opts:
        mode: websocket
        tls: true
        skip-cert-verify: true
