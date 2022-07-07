@@ -7,7 +7,7 @@ proxy-providers:
   fo:
     type: http
     path: ./profiles/proxies/bl.yaml
-    url: https://api.pay.pm/api/v1/link/clash?token=8eNIdNSPMhylHUGm
+    url: https://
     interval: 3600
     filter: 'Hong Kong'
     health-check:
@@ -17,7 +17,7 @@ proxy-providers:
   ba:
     type: http
     path: ./profiles/proxies/ky.yaml
-    url: https://suo.st/hsbHK1R
+    url: https://
     filter: 'IEPL-香港'
     interval: 3600
     health-check:
@@ -27,7 +27,7 @@ proxy-providers:
   BLSG:
     type: http
     path: ./profiles/proxies/NETFLIX.yaml
-    url: https://api.pay.pm/api/v1/link/clash?token=8eNIdNSPMhylHUGm
+    url: https://
     interval: 3600
     filter: 'Singapore'
     health-check:
